@@ -45,7 +45,7 @@ const Tasks = () => {
                 <input type="text" disabled value={tasks.length + 1}/>
                 <br />
                 <label>Title: </label>
-                <input onChange={(e) => setTitle(e.target.value)} className="title"></input>
+                <input value={title} onChange={(e) => setTitle(e.target.value)} className="title"></input>
                 <div className="dropdown">
                 <label>Completed: </label>
                 <select onChange={(e) => setCompletedStatus(e.target.value)}>
@@ -56,7 +56,7 @@ const Tasks = () => {
                 </div>
                 <button type="submit">Add</button>
             </form>
-            
+
             <h3>User Tasks</h3>
             <table>
                 <thead>
