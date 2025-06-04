@@ -39,28 +39,6 @@ const Tasks = () => {
  
     return(
         <>
-            
-            <h3>User Tasks</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Title</th>
-                        <th>Completed</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {tasks.map((task) => {
-                        return(
-                        <tr>
-                            <td>{task.id}</td>
-                            <td>{task.title}</td>
-                            <td>{task.completed ? "Yes" : "No"}</td>
-                        </tr>
-                        )
-                    })}
-                </tbody>
-            </table>
             <h3>Add Task</h3>
             <form onSubmit={(e) => handleAddTask(e)}>
                 <label>Task Id: </label>
@@ -78,6 +56,29 @@ const Tasks = () => {
                 </div>
                 <button type="submit">Add</button>
             </form>
+            
+            <h3>User Tasks</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Completed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {tasks.map((task) => {
+                        return(
+                        <tr>
+                            <td>{task.id}</td>
+                            <td>{task.title}</td>
+                            <td>{task.completed === true || task.completed === "Yes" ? "Yes" : "No"}</td>
+                        </tr>
+                        )
+                    })}
+                </tbody>
+            </table>
+            
 
         </>
     )
