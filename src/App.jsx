@@ -1,10 +1,11 @@
 import Tasks from "./components/Tasks"
+import "./styles/App.css"
 
 function App() {
 
   return (
     <>
-      <h3>User Tasks: </h3>
+      <h3 className="app-title">To-Do App</h3>
       <Tasks/>
     </>
   )
